@@ -1,10 +1,10 @@
-FROM tiangolo/node-frontend:10 as build-stage
+FROM node:18-alpine as build-stage
 WORKDIR /app
-COPY package*.json /app/
+COPY package*.json ./
 RUN npm install
-COPY ./ /app/
-RUN npm run build
+COPY . .
+RUN NODE_OPTIONS=--openssl-legacy-provider npm run build
 
-FROM nginx:1.15
+FROM nginx:1.25-alpine
 COPY --from=build-stage /app/build/ /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
