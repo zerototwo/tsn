@@ -1,6 +1,6 @@
-# :rabbit: Bunnybook :rabbit:
+# :rabbit: TSN
 
-## A tiny social network (for bunnies), built with FastAPI and React+RxJs.
+## A tiny social network, built with FastAPI and React+RxJs.
 
 <kbd>
   <img src="https://user-images.githubusercontent.com/19171248/131324206-1f97c51b-7192-4e62-8619-abde46aea5b6.png"/>
